@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>UserInfoController</servlet-name>
+  	<display-name>UserInfoController</display-name>
+  	<description></description>
+  	<servlet-class>com.micylt.webproject.BookList.userinfo.controller.UserInfoController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserLoginController</servlet-name>
+  	<display-name>UserLoginController</display-name>
+  	<description></description>
+  	<servlet-class>com.micylt.webproject.BookList.userinfo.controller.UserLoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.micylt.webproject.BookList.userinfo.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserInfoController</servlet-name>
+  	<url-pattern>/UserInfoController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLoginController</servlet-name>
+  	<url-pattern>/UserLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
