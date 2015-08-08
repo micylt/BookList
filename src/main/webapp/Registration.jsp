@@ -82,7 +82,7 @@
 
 			<!-- registration form -->
 			<div class="form1">
-				<form action="UserInfoController" class="form-horizontal" role="form" id="registerform" method="post" accept-charset="UTF-8"	>
+				<form action="UserInfoController" class="form-horizontal" role="form" id="registerform" method="post" accept-charset="UTF-8">
 				    <div class="form-group">
 						<div class="col-sm-10" id="col-sm-10">
 							<input name="first_name" type="name" class="form-control" id="first_name" placeholder="First name">

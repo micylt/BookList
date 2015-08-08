@@ -78,26 +78,41 @@
 				<!-- get rid of <center></center> -->
 			</h1>
 		</div>
-		<!-- search bar for finding textbooks -->
 		<div id="colorstrip">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<!-- everything in this div is responsive -->
-						<div id="search_container">
-							<h3 style="color: white">Sell your textbooks</h3>
-							<div class="input-group stylish-input-group">
-								<input type="text" class="form-control" placeholder="Enter ISBN number"> <span
-									class="input-group-addon"> <button type="submit">
-										<span class="glyphicon glyphicon-search"></span> <!-- bootstrap icon -->
-									</button>
-								</span>
-							</div>
-						</div>
+			<!-- everything in this div is responsive -->
+			<div class="sale-container">
+				<h3 style="color: white">Sell your textbooks</h3>
+				<form name="salesForm" class="sales-form" role="form" method="post" accept-charset="UTF-8">
+					<div class="sale-entry">
+						<label for="book_title" id="sale-label">Book Title</label> 
+						<input name="title" class="sale-input" id="book_title" placeholder="Book Title">
 					</div>
-				</div>
+					<div class="sale-entry">
+						<label for="isbn" id="sale-label">ISBN Number</label> 
+						<input name="isbn" class="sale-input" id="isbn" placeholder="Enter ISBN number">
+					</div>
+					<div class="sale-entry">
+						<label for="price" id="sale-label">Price</label> 
+						<input name="price" class="sale-input" id="price" placeholder="Price">
+					</div>
+					<div class="sale-entry">
+						<label for="condition" id="sale-label">Condition</label>
+						<select name="condition" class="sale-input" id="condition">
+						<option value="select">-</option>
+						<option value="new">New</option>
+						<option value="like-new">Like new</option>
+						<option value="good">Good</option>
+						<option value="acceptable">Acceptable</option>
+						<option value="damaged">Damaged</option>
+						</select>
+					</div>
+					<label for="description" id="sale-label">Comments (optional)</label>
+					<div class="sale-entry">
+						<textarea cols="76" rows="4" name="description"></textarea>
+					</div>
+				</form>
+				<!-- </div> -->
 			</div>
 		</div>
-	</div>
 </body>
 </html>

@@ -2,8 +2,7 @@
    fixed: image won't move when user scrolls
 */
 body {
-	background-image:
-		url('https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg');
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,9 +20,7 @@ body {
 	background: rgba(0, 0, 0, 0.4);
 }
 
-html {
-	overflow: scroll;
-}
+html { overflow: scroll; }
 
 .wrapper1 {
 	color: white;
@@ -32,21 +29,9 @@ html {
 #search_container {
     margin-top:20%;
 }
-.stylish-input-group .input-group-addon {
-    background: white !important; 
-}
-.stylish-input-group .form-control {
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-}
-.stylish-input-group button {
-    border:0;
-    background:transparent;
-}
 
 #colorstrip {
-    width: 100%; height: 50%;
+    width: 100%; height: 60%;
     border-style: solid;
     border-color: #202020;
     background-color: #202020;
@@ -89,7 +74,33 @@ html {
 	background-color: #000000;
 }
 
-/* styling for form input */
+.sales-form {
+	margin: 0 auto; 
+	width: 600px;
+}
+
+.sale-container {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#sale-label {
+	color: white;
+	display:inline-block;
+	width: 150px;
+}
+
+input.sale-input {
+	width: 350px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+} 	
+
+#condition { width: 350px; }
+
+/* styling for registration form input */
 #col-sm-10 {
 	margin: 0 auto;
 	float: none;

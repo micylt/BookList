@@ -65,7 +65,7 @@ public class UserLoginController extends HttpServlet {
 	}
 	
 	/**
-	 * encodes URL passed in
+	 * encodes URL passed in. Allows for session transfer to link
 	 */
 	private void encodeURL(String URL, HttpServletResponse response) throws ServletException, IOException {
 		String encodedURL = response.encodeRedirectURL(URL);
