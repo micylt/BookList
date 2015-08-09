@@ -100,7 +100,7 @@ public class UserLoginController extends HttpServlet {
 					if (passwordsAreEqual) {
 						loginResponse = userInfoDao.getUserName(emailAddress); //credentials passed
 						System.out.println("Password correct!");
-					} else {
+					} else { //password does not match
 						loginResponse = "UserDNE.jsp"; // temp for testing
 						System.out.println("Wrong password");
 					}

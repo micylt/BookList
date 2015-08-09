@@ -11,18 +11,20 @@
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!--these next two scripts allow the use of the jQuery form validation plug in.-->
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>
+<script src="jquery.easing.1.3.mine.js" type="text/javascript"></script> <!-- don't hot link this, download it-->
+<script type="text/javascript" src="js/scrollToAnchor.js"></script>	<!-- not scrolling how I want it to -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="overlay">
-		<nav class="navbar navbar-inverse">
+	<div class ="navrap" style="margin-bottom: 80px;">
+		<nav class="navbar navbar-inverse" id="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
@@ -30,7 +32,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="AccountPage.jsp">Home</a></li>
+					<li class="active"><a href="<%=response.encodeURL("AccountPage.jsp") %>">Home</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Page 1-1</a></li>
@@ -41,7 +43,7 @@
 					<li><a href="#">Page 3</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 					<li class="dropdown">
             		  <a class="dropdown-toggle" href="#" data-toggle="dropdown"> <span class="glyphicon glyphicon-log-in"></span> Login</a>
             		  <div class="dropdown-menu" style="padding: 5px; padding-bottom: 5px; background-color: #000000;">
@@ -72,17 +74,31 @@
 			</div>
 		</div>
 		</nav>
-		<div class="wrapper1">
-			<h1 class="centerHeader">
+		</div>
+		<div class="welcome" style="margin-bottom: 100px;">
+		<h1 class="centerHeader" style="color: white">
 				<center>Welcome to BookList</center> <!-- TODO: GET RID OF <center></center> -->
 			</h1>
-			<p>
-			<center>Buy and sell textbooks now.</center>
-			</p>
-
+			<h4>
+			<center style="color: white">Buy and sell textbooks now.</center>
+			</h4>
+		</div>
+		<div id="colorstrip" style="margin-bottom: 100px;">
+			<h3 class="sec-header">BookList is a simple way for students<br>to buy and sell textbooks to each other at their own price</h3>
+			<hr style="width: 50%; margin-bottom: 30px;">
+			<div style="margin-bottom: 80px;"> <h4 class="sec-header">Choose whether to meet face to face or complete transactions online</h4></div>
+			<div>
+				<h4 class="sec-header" style="margin-bottom: 20px;">To get started<br>login or sign up now</h4>
+				<div style="text-align:center"> <!-- centers the link -->
+				<a href="#sign-up" class="glyphicon glyphicon-download" id="register-link"></a>
+				</div>
+			</div>
+		</div>
+			<h1 class="centerHeader"></h1>
 			<!-- registration form -->
-			<div class="form1">
-				<form action="UserInfoController" class="form-horizontal" role="form" id="registerform" method="post" accept-charset="UTF-8">
+			<a name="sign-up"></a>
+			<div class="form1" style="margin-bottom: 20px;">
+				<form action="UserInfoController" class="form-horizontal" role="form" name ="registerform" id="registerform" method="post" accept-charset="UTF-8">
 				    <div class="form-group">
 						<div class="col-sm-10" id="col-sm-10">
 							<input name="first_name" type="name" class="form-control" id="first_name" placeholder="First name">
@@ -119,7 +135,9 @@
 					</div>
 				</form>
 			</div>
-		</div>
+			<div id="bottom-info">
+			
+			</div>
 	</div>
 </body>
 </html>

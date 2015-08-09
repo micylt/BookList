@@ -42,7 +42,8 @@
 	%>
 
 	<div class="overlay">
-		<nav class="navbar navbar-inverse">
+		<div class ="navrap" style="margin-bottom: 80px;">
+		<nav class="navbar navbar-inverse" id="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -54,7 +55,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="AccountPage.jsp">Home</a></li>
+					<li class="active"><a href="<%=response.encodeURL("AccountPage.jsp") %>">Home</a></li>
 					<li><a href="<%=response.encodeURL("AccountPage.jsp") %>">Buy</a></li> <!-- continue session to these links -->
 					<li><a href="<%=response.encodeURL("SellBooks.jsp") %>">Sell</a></li>
 					<li><a href="#">About</a></li>
@@ -69,6 +70,7 @@
 			</div>
 		</div>
 		</nav>
+		</div>
 		<div class="wrapper1">
 			<h1 class="centerHeader">
 				<center>

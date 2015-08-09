@@ -42,7 +42,8 @@
 	%>
 
 	<div class="overlay">
-		<nav class="navbar navbar-inverse">
+		<div class ="navrap" style="margin-bottom: 80px;">
+		<nav class="navbar navbar-inverse" id="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -66,6 +67,7 @@
 			</div>
 		</div>
 		</nav>
+		</div>
 		<div class="wrapper1">
 			<h1 class="centerHeader">
 				<center>
