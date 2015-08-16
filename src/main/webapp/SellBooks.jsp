@@ -10,11 +10,6 @@
 <!-- import of bootstrap css and js code -->
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<!--these next two scripts allow the use of the jQuery form validation plug in.-->
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/formValidation.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -86,20 +81,20 @@
 				<h3 style="color: white">Sell your textbooks</h3>
 				<form name="salesForm" class="sales-form" role="form" method="post" accept-charset="UTF-8">
 					<div class="sale-entry">
-						<label for="book_title" id="sale-label">Book Title</label> 
+						<label for="book_title" class="sale-label">Book Title</label> 
 						<input name="title" class="sale-input" id="book_title" placeholder="Book Title">
 					</div>
 					<div class="sale-entry">
-						<label for="isbn" id="sale-label">ISBN Number</label> 
+						<label for="isbn" class="sale-label">ISBN Number</label> 
 						<input name="isbn" class="sale-input" id="isbn" placeholder="Enter ISBN number">
 					</div>
 					<div class="sale-entry">
-						<label for="price" id="sale-label">Price</label> 
+						<label for="price" class="sale-label">Price</label> 
 						<input name="price" class="sale-input" id="price" placeholder="Price">
 					</div>
 					<div class="sale-entry">
-						<label for="condition" id="sale-label">Condition</label>
-						<select name="condition" class="sale-input" id="condition">
+						<label for="condition" class="sale-label">Condition</label>
+						<select name="condition" id="condition" style="width: 350px;">
 						<option value="select">-</option>
 						<option value="new">New</option>
 						<option value="like-new">Like new</option>
@@ -108,7 +103,7 @@
 						<option value="damaged">Damaged</option>
 						</select>
 					</div>
-					<label for="description" id="sale-label">Comments (optional)</label>
+					<label for="description" class="sale-label">Comments (optional)</label>
 					<div class="sale-entry">
 						<textarea cols="76" rows="4" name="description"></textarea>
 					</div>
@@ -116,5 +111,10 @@
 				<!-- </div> -->
 			</div>
 		</div>
+<!--these next two scripts allow the use of the jQuery form validation plug in.-->
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/formValidation.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -20,16 +20,15 @@ body {
 	background: rgba(0, 0, 0, 0.4);
 }
 
-html { overflow: scroll; }
-
 .wrapper1 {
 	color: white;
 }
 
+/* TODO: stop styling by id, use class instead */
 #navbar { 
-	position: fixed;
+    position: fixed;
 	width: 100%;
-	-webkit-backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
 	-webkit-transform: translateZ(0);
 }
 
@@ -71,20 +70,13 @@ html { overflow: scroll; }
 }
 
 /*login credentials*/
-#login_email {
+.login_creds {
 	left: 0px;
 	width: 305px;
 	height: 30px;
 	margin: 0 auto;
 	margin-bottom: 5px;
-}
-
-#login_pwd {
-	left: 0px;
-	width: 305px;
-	height: 30px;
-	margin: 0 auto;
-	margin-bottom: 5px;
+	border-radius: 3px;
 }
 
 /* styling for form */
@@ -110,7 +102,7 @@ html { overflow: scroll; }
 }
 
 
-#sale-label {
+.sale-label {
 	color: white;
 	display:inline-block;
 	width: 150px;
@@ -121,8 +113,6 @@ input.sale-input {
 	margin-bottom: 10px;
 	border-radius: 5px;
 } 	
-
-#condition { width: 350px; }
 
 /* styling for registration form input */
 #col-sm-10 {

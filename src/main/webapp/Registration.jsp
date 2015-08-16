@@ -10,21 +10,15 @@
 <!-- import of bootstrap css and js code -->
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<!--these next two scripts allow the use of the jQuery form validation plug in.-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/formValidation.js"></script>
-<script src="jquery.easing.1.3.mine.js" type="text/javascript"></script> <!-- don't hot link this, download it-->
-<script type="text/javascript" src="js/scrollToAnchor.js"></script>	<!-- not scrolling how I want it to -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="overlay">
-	<div class ="navrap" style="margin-bottom: 80px;">
+		<div class ="navrap" style="margin-bottom: 80px;">
 		<nav class="navbar navbar-inverse" id="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
@@ -50,12 +44,12 @@
 <!-- login form -->   <form class="login-form" action="UserLoginController" accept-charset="UTF-8" id="loginform">
   					  <div class="form-group">
 						<div class="col-sm-10">
-							<input name="login_email" type="email" class="form-control" id="login_email" placeholder="name@example.com">
+							<input name="login_email" type="email" class="login_creds" id="login_email" placeholder="name@example.com">
 						</div>
 					  </div>
 					<div class="form-group">
 						<div class="col-sm-10">
-							<input name="login_pwd" type="password" class="form-control" id="login_pwd" placeholder="Password">
+							<input name="login_pwd" type="password" class="login_creds" id="login_pwd" placeholder="Password">
 							<% String user_status = (String) (session.getAttribute("user")); %>
 							<% if (user_status != null && user_status.equals("DNE")) { %>
 						    <div class="error">Invalid email or password.</div>
@@ -137,7 +131,14 @@
 			</div>
 			<div id="bottom-info">
 			
-			</div>
+		</div>
 	</div>
+<!--these next two scripts allow the use of the jQuery form validation plug in.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/formValidation.js"></script>
+<script src="jquery.easing.1.3.mine.js" type="text/javascript"></script> <!-- don't hot link this, download it-->
+<script type="text/javascript" src="js/scrollToAnchor.js"></script>	<!-- not scrolling how I want it to -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
