@@ -94,7 +94,7 @@
 		</div>
 	</div>
 	
-	<!--these next two scripts allow the use of the jQuery form validation plug in.-->
+<!-- scripts -->
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>

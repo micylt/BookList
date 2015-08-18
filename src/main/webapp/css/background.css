@@ -1,23 +1,25 @@
-/* background image
+/* 
+   background image
    fixed: image won't move when user scrolls
 */
 body {
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2b/Bookshelf.jpg');
+	background-image: url("images/Bookshelf.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
 }
 
+/* dims background */
 .overlay {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	position: fixed;
+	position: fixed; /* moves with scroll */
 	overflow: auto;
 	top: 0px;
 	left: 0px;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.4); /* opacity */
 }
 
 .wrapper1 {
@@ -30,6 +32,20 @@ body {
 	width: 100%;
     -webkit-backface-visibility: hidden;
 	-webkit-transform: translateZ(0);
+}
+
+.centerHeader {
+	color: white; 
+	font-family: 'Indie Flower'; 
+	font-size: 40px; 
+	text-align: center;
+}
+
+.centerHeader2 {
+	color: white; 
+	font-family: 'Indie Flower'; 
+	font-size: 20px; 
+	text-align: center;
 }
 
 #search_container {

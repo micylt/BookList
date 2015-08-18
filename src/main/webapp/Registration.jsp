@@ -7,9 +7,10 @@
 <title>BookList</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- import of bootstrap css and js code -->
+<!-- import of css -->
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="overlay">
@@ -70,12 +71,8 @@
 		</nav>
 		</div>
 		<div class="welcome" style="margin-bottom: 100px;">
-		<h1 class="centerHeader" style="color: white">
-				<center>Welcome to BookList</center> <!-- TODO: GET RID OF <center></center> -->
-			</h1>
-			<h4>
-			<center style="color: white">Buy and sell textbooks now.</center>
-			</h4>
+			<h1 class="centerHeader">Welcome to BookList</h1>
+			<h2 class="centerHeader2">Buy and sell textbooks now.</h2>
 		</div>
 		<div id="colorstrip" style="margin-bottom: 100px;">
 			<h3 class="sec-header">BookList is a simple way for students<br>to buy and sell textbooks to each other at their own price</h3>
@@ -133,11 +130,11 @@
 			
 		</div>
 	</div>
-<!--these next two scripts allow the use of the jQuery form validation plug in.-->
+<!-- scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>
-<script src="jquery.easing.1.3.mine.js" type="text/javascript"></script> <!-- don't hot link this, download it-->
+<script src="jquery.easing.1.3.mine.js" type="text/javascript"></script> <!-- don't hot link this, download it -->
 <script type="text/javascript" src="js/scrollToAnchor.js"></script>	<!-- not scrolling how I want it to -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
