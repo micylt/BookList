@@ -10,7 +10,7 @@
 <!-- import of css -->
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="overlay">
@@ -90,6 +90,7 @@
 			<a name="sign-up"></a>
 			<div class="form1" style="margin-bottom: 20px;">
 				<form action="UserInfoController" class="form-horizontal" role="form" name ="registerform" id="registerform" method="post" accept-charset="UTF-8">
+				    <label for="reg" style="color: white;">Sign Up</label> 
 				    <div class="form-group">
 						<div class="col-sm-10" id="col-sm-10">
 							<input name="first_name" type="name" class="form-control" id="first_name" placeholder="First name">

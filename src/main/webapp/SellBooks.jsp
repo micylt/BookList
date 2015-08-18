@@ -10,6 +10,7 @@
 <!-- import of css -->
 <link rel="stylesheet" type="text/css" href="css/background.css"> <!-- my css -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -66,15 +67,7 @@
 		</div>
 		</nav>
 		</div>
-		<div class="wrapper1">
-			<h1 class="centerHeader">
-				<center>
-					Hello
-					<%=userName%>, ready to list your books?
-				</center>
-				<!-- get rid of <center></center> -->
-			</h1>
-		</div>
+			<h1 class="centerHeader">Hello <%=userName%>, ready to list your books?</h1>
 		<div id="colorstrip">
 			<!-- everything in this div is responsive -->
 			<div class="sale-container">
