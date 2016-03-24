@@ -18,7 +18,6 @@ public class UserInfoDAO {
 
 		if (conn == null) {
 			postgresHelper = new PostgresHelper();
-
 			postgresHelper.connect();
 			conn = postgresHelper.getConnection();
 		}
@@ -41,7 +40,7 @@ public class UserInfoDAO {
 		PreparedStatement st = null;
 
 		try {
-			String query = "insert into booklist_users.users (first_name, last_name, email, password, salt, active) values (?, ?, ?, ?, ?, ?)";
+			String query = "insert into users (first_name, last_name, email, password, salt, active) values (?, ?, ?, ?, ?, ?)";
 			st = conn.prepareStatement(query);
 
 			st.setString(1, userInfo.getFirstName());
@@ -75,7 +74,7 @@ public class UserInfoDAO {
 		Statement st = null;
 
 		try {
-			String query = String.format("SELECT salt FROM booklist_users.users where email = '%s'", email);
+			String query = String.format("SELECT salt FROM users where email = '%s'", email);
 			st = conn.createStatement();
 			rs = st.executeQuery(query);
 
@@ -111,7 +110,7 @@ public class UserInfoDAO {
 		Statement st = null;
 
 		try {
-			String query = String.format("SELECT password FROM booklist_users.users where email = '%s'", email);
+			String query = String.format("SELECT password FROM users where email = '%s'", email);
 
 			st = conn.createStatement();
 			rs = st.executeQuery(query);
@@ -146,7 +145,7 @@ public class UserInfoDAO {
 		Statement st = null;
 
 		try {
-			String query = "SELECT email FROM booklist_users.users";
+			String query = "SELECT email FROM users";
 
 			st = conn.createStatement();
 			rs = st.executeQuery(query);
@@ -184,7 +183,7 @@ public class UserInfoDAO {
 		String first_name = "failed to retrieve name";
 
 		try {
-			String query = String.format("SELECT first_name FROM booklist_users.users where email = '%s'", email);
+			String query = String.format("SELECT first_name FROM users where email = '%s'", email);
 
 			st = conn.createStatement();
 			rs = st.executeQuery(query);

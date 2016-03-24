@@ -52,6 +52,7 @@ public class UserInfoController extends HttpServlet {
 
 		UserInfoBean userInfo = new UserInfoBean();
 
+		//TODO: validate these fields here on the back end.
 		userInfo.setFirstName(first_name);
 		userInfo.setLastName(last_name);
 		userInfo.setEmailAddress(email);
@@ -63,7 +64,7 @@ public class UserInfoController extends HttpServlet {
 		if (forward.equals("AccountPage.jsp")) { //everything's fine
 			session.setAttribute("user", first_name);
 			//setting session to expire in 30 mins
-			session.setMaxInactiveInterval(30 * 60);
+			session.setMaxInactiveInterval(30 * 60); //30 min session
 			Cookie userName = new Cookie("user", first_name);
 			response.addCookie(userName);
 			//get the encoded URL string
@@ -77,13 +78,17 @@ public class UserInfoController extends HttpServlet {
 	}
 
 	/**
-	 * encodes URL passed in
+	 * encodes URL passed in, allows for passing of sessions information.
 	 */
 	private void encodeURL(String URL, HttpServletResponse response) throws ServletException, IOException {
 		String encodedURL = response.encodeRedirectURL(URL);
 		response.sendRedirect(encodedURL);
 	}
 
+	/**
+	 * create new user and enter credentials into database.
+	 * Redirects to registration page if email address entered already exists in the database.
+	 */
 	private String newUser(UserInfoBean userInfo, String plainTextPassword) {
 		String webPageToForwardTo = "SystemError.jsp";	// Send the user to the next page;
 

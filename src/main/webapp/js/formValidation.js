@@ -1,5 +1,5 @@
 // takes form elements by name, not id
-$(document).ready(function(){
+$(document).ready(function() {
 	$('#registerform').validate({
 		errorClass: "error",
 		rules:{

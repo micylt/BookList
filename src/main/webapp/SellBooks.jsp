@@ -1,7 +1,7 @@
  <!-- this is the registration jsp page of BookList -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <title>BookList</title>
@@ -42,18 +42,13 @@
 		<nav class="navbar navbar-inverse" id="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="Registration.jsp">BookList</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="<%=response.encodeURL("AccountPage.jsp") %>">Home</a></li>
+					<li><a href="<%=response.encodeURL("AccountPage.jsp") %>">Home</a></li>
 					<li><a href="<%=response.encodeURL("AccountPage.jsp") %>">Buy</a></li> <!-- continue session to these links -->
-					<li><a href="<%=response.encodeURL("SellBooks.jsp") %>">Sell</a></li>
+					<li class="active"><a href="<%=response.encodeURL("SellBooks.jsp") %>">Sell</a></li>
 					<li><a href="#">About</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -67,8 +62,8 @@
 		</div>
 		</nav>
 		</div>
-			<h1 class="centerHeader">Hello <%=userName%>, ready to list your books?</h1>
-		<div id="colorstrip">
+			<h1 class="centerHeader">Ready to list your books, <%=userName%>?</h1>
+		<div class="colorstrip">
 			<!-- everything in this div is responsive -->
 			<div class="sale-container">
 				<h3 style="color: white">Sell your textbooks</h3>
@@ -98,7 +93,7 @@
 					</div>
 					<label for="description" class="sale-label">Comments (optional)</label>
 					<div class="sale-entry">
-						<textarea cols="76" rows="4" name="description"></textarea>
+						<textarea cols="80" rows="4" name="description"></textarea>
 					</div>
 				</form>
 				<!-- </div> -->

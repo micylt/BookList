@@ -88,7 +88,7 @@ public class UserLoginController extends HttpServlet {
 			userInfoDao = new UserInfoDAO();
 			if (!(userInfoDao.emailExists(emailAddress))) { // check if the email provided is in the database
 				System.out.println("The email address you entered does not exist in the database."); // temp for testing
-				loginResponse = "UserDNE.jsp"; // temp for testing
+				loginResponse = "UserDNE.jsp";
 			} else {
 				salt = userInfoDao.getSaltForEmailAddress(emailAddress); // gets the original salt for this email for database
 				dbEncryptedPassword = userInfoDao.getEncryptedPasswordForEmailAddress(emailAddress); // gets password from database
@@ -101,7 +101,7 @@ public class UserLoginController extends HttpServlet {
 						loginResponse = userInfoDao.getUserName(emailAddress); //credentials passed
 						System.out.println("Password correct!");
 					} else { //password does not match
-						loginResponse = "UserDNE.jsp"; // temp for testing
+						loginResponse = "UserDNE.jsp";
 						System.out.println("Wrong password");
 					}
 
